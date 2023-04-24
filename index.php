@@ -22,25 +22,40 @@ $classeController = new ControllerClasse();
 
 if(isset($_SESSION['connected'])){
     switch($path){
-        case '':
-        include '';
-        break;
+        case '/site/':
+            include './App/Vue/home.php';
+            break;
 
-        case '':
-        include '';
-        break;
+        case '/site/profil':
+            include './App/Vue/view_compte.php';
+            break;
 
-        case '':
-        include '';
-        break;
+        case '/site/deconnexion':
+            include './App/Vue/view_deconnection.php';
+            break;
 
-        case '':
-        include '';
-        break;
+        case '/site/ajoutPerso':
+            include './App/Vue/view_add_perso.php';
+            break;
 
-        default;
-        include './App/';
-        break;
+        default:
+            include './App/Vue/view_error.php';
+            break;
+    }
+}else{
+    switch($path){
+        case '/site/':
+            include './App/Vue/home.php';
+            break;
+        case '/site/inscription':
+            $joueurController->insertUser();
+            break;
+        case '/site/connexion':
+            $joueurController->connectJoueur();
+            break;
+        default:
+            include './App/Vue/view_error.php';
+            break;
     }
 }
 ?>

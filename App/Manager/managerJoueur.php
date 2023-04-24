@@ -40,6 +40,7 @@ class ManagerJoueur extends ModelJoueurs{
             $req->bindparam(1,$pseudo,PDO::PARAM_STR);
             $req->bindParam(2,$mail,PDO::PARAM_STR);
             $req->bindParam(3,$hashed,PDO::PARAM_STR);
+            $req->execute();
         }catch(Exception $e){
             die('Error:'.$e->getMessage());
         }
