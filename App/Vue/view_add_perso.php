@@ -7,6 +7,7 @@
     <title>Ajoute ton perso</title>
 </head>
 <body>
+    <?php include './App/Vue/view_navbar.php' ;?>
     <h3>ajoute un nouveau personnage</h3>
 
     <form action="" method="post" enctype="multipart/form-data">
@@ -16,7 +17,7 @@
         <select name="classe">
             <?php
                 foreach($data as $value){
-                    echo '<option value='.$value->id_classe.'>'.$value->classe_classe.'</option>';
+                    echo '<option value='.$value->id_classes.'>'.$value->classe_classes.'</option>';
                 }
             ?>
         </select>

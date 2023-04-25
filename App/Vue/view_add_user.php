@@ -7,6 +7,7 @@
     <title>inscription</title>
 </head>
 <body>
+<?php include './App/Vue/view_navbar.php' ;?>
 <h3>Inscrivez-vous :</h3>
         <form action="" method="post" enctype="multipart/form-data">
             <label for="pseudo">saisir votre pseudo :</label>

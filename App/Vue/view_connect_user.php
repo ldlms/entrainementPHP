@@ -7,6 +7,7 @@
     <title>connexion</title>
 </head>
 <body>
+    <?php include './App/Vue/view_navbar.php' ;?>
     <h3>Connectez-vous !</h3>
     <form action="" method="post" enctype="multipart/form-data">
         <label for="pseudo">Votre pseudo</label>

@@ -1,6 +1,9 @@
 <?php
 
-class ModelPersonnage{
+namespace App\Model;
+use App\utils\BddConnect;
+
+class ModelPersonnage extends BddConnect{
     private ?int $id;
     private ?string $nom;
     private ?ModelJoueurs $createur;

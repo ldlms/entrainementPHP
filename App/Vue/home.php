@@ -7,6 +7,14 @@
     <title>Acceuil</title>
 </head>
 <body>
-    <h1>Bonjour !</h1>
+    <?php include './App/Vue/view_navbar.php' ;?>
+    <?php if(isset($_SESSION['connected'])):?>
+        <br>
+       <?php echo 'Bonjour '.$_SESSION['pseudo'].' !';
+        ?>
+    <?php else:?>
+        <?php echo 'Bonjour !' 
+            ?>
+    <?php endif ;?>    
 </body>
 </html>

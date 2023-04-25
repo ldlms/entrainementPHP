@@ -1,6 +1,8 @@
 <?php
+namespace App\Model;
+use App\utils\BddConnect;
 
-class ModelClasse{
+class ModelClasse extends BddConnect{
     private ?int $id;
     private ?string $classe;
     private ?int $pointDeVie;
@@ -41,6 +43,10 @@ class ModelClasse{
     }
     public function setDefense($defense){
         $this->defense = $defense;
+    }
+
+    public function __toString():string{
+        return $this->classe;
     }
 }
 ?>

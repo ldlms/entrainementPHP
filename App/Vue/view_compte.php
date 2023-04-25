@@ -7,6 +7,6 @@
     <title>les comptes utilisateur</title>
 </head>
 <body>
-    
+<?php include './App/Vue/view_navbar.php' ;?>
 </body>
 </html>

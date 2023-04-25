@@ -1,6 +1,9 @@
 <?php
 
-class ModelJoueurs{
+namespace App\Model;
+use App\utils\BddConnect;
+
+class ModelJoueurs extends BddConnect{
     private ?int $id;
     private ?string $pseudo;
     private ?string $mail;

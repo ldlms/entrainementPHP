@@ -1,7 +1,12 @@
 <?php
 session_start();
 
-include './App/utils/connectBdd.php';
+use App\Controler\ControllerClasse;
+use App\Controler\ControllerJoueur;
+use App\Controler\ControllerPersonnage;
+
+
+include './App/utils/BddConnect.php';
 include './App/utils/fonctions.php';
 include './App/Model/modelClasse.php';
 include './App/Model/modelJoueurs.php';
@@ -31,11 +36,11 @@ if(isset($_SESSION['connected'])){
             break;
 
         case '/site/deconnexion':
-            include './App/Vue/view_deconnection.php';
+            $joueurController->deconnectJoueur();
             break;
 
         case '/site/ajoutPerso':
-            include './App/Vue/view_add_perso.php';
+            $personnageController->insertPersonnage();
             break;
 
         default:

@@ -1,11 +1,16 @@
 <?php 
 
-use App\Model\ModelClasse;
+namespace App\Controler;
+
+use App\utils\BddConnect;
+use App\utils\Fonctions;
+use App\Manager\managerPersonnage;
+
 class ControllerPersonnage extends managerPersonnage{
     
     public function insertPersonnage(){
     if(isset($_SESSION['connected'])){
-    $class = new ModelClasse();
+    $class = new ControllerClasse();
     $data = $class->getAllClass();
     $msg = '';
         if(isset($_POST['submit'])){
@@ -16,7 +21,7 @@ class ControllerPersonnage extends managerPersonnage{
                 $this->setNom($nom);
                 $this->setClasse($classe);
                 $this->setCreateur($createur);
-                if($this->getpersoByInfo()){
+                if($this->getPersoByInfo()){
                     $msg = 'Le personnage existe déja !';
                     echo '<script>
                                 setTimeout(()=>{
